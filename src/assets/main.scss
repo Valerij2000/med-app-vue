@@ -1,0 +1,24 @@
+@import './tailwind.scss';
+@import './base.scss';
+
+.box-inline {
+  margin: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: green;
+
+  &.active {
+    border: 3px solid black;
+  }
+}
+
+.box-class {
+  margin: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+
+  &.active {
+    border: 3px solid rgb(68, 228, 9);
+  }
+}
