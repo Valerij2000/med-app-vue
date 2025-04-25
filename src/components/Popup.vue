@@ -21,7 +21,10 @@
       <h2 class="text-xl font-semibold mb-4">Calculation Summary</h2>
 
       <div class="space-y-2">
-        <p><strong>Result:</strong> {{ result }}</p>
+        <div v-if="result">
+          <p><strong>Result:</strong> {{ result }}</p>
+        </div>
+        <div v-else>not results yet ...</div>
       </div>
     </div>
   </div>
@@ -30,5 +33,5 @@
 <script setup>
 import { ref } from 'vue'
 defineProps(['result'])
-const showPopup = ref(true)
+const showPopup = ref(false)
 </script>
