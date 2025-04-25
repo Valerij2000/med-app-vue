@@ -1,12 +1,17 @@
-import { ref, computed } from 'vue'
+// stores/useFormStore.js
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
+export const useFormStore = defineStore('form', {
+  state: () => ({
+    currentForm: 'form1',
+    result: null
+  }),
+  actions: {
+    setForm(form) {
+      this.currentForm = form
+    },
+    setResult(value) {
+      this.result = value
+    }
   }
-
-  return { count, doubleCount, increment }
 })

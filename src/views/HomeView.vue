@@ -1,6 +1,4 @@
-<script setup>
-import TheWelcome from '../components/BmiResult.vue'
-</script>
+<script setup></script>
 
 <template>
   <main>

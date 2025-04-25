@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-md mx-auto mt-10">
+  <div class="w-full">
     <div class="relative">
       <input
         type="text"
@@ -39,6 +39,8 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 
+const emit = defineEmits(['select'])
+
 const options = ['Vue', 'React', 'Angular', 'Svelte', 'Solid', 'Alpine']
 const query = ref('')
 const selected = ref(null)
@@ -53,6 +55,7 @@ const select = (option) => {
   selected.value = option
   query.value = option
   open.value = false
+  emit('select', option)
 }
 
 const selectOption = () => {
